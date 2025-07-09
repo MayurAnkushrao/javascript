@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="FirstTest.css">
-        <!--
-            <script src="FirstTest.js"></script>
-        
-            <script src="ThirdTest.js"></script>
-            <script src="SecondTest.js"></script>
-            -->
-             <script src="functions.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console Log to Page</title>
+  <link rel="stylesheet" href="FirstTest.css">
+  <style>
+    #console-output {
+      white-space: pre-wrap;
+      background-color: #111111b3;
+      color: rgba(0, 255, 0, 0.76);
+      padding: 10px;
+      font-family: monospace;
+      height: 300px;
+      overflow-y: auto;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Hello world</h1>
+  <h1>Hello world</h1>
+
+  <h2>Console Logs Output:</h2>
+  <div id="console-output"></div>
+
+  <!-- Connected JavaScript files -->
+  <!--
+  <script src="FirstTest.js"></script>
+  <script src="SecondTest.js"></script>
+  <script src="ThirdTest.js"></script>
+  -->
+  <script>
+    // Override console.log
+    const originalLog = console.log;
+    console.log = function (...args) {
+      originalLog(...args);
+
+      const outputDiv = document.getElementById("console-output");
+      const message = args.map(arg =>
+        typeof arg === 'object' ? JSON.stringify(arg) : String(arg)
+      ).join(' ');
+
+      outputDiv.innerHTML += message + '\n';
+    };
+  </script>
+<!--
+    <script src="FirstTest.js"></script>
+    <script src="ThirdTest.js"></script>
+    <script src="SecondTest.js"></script>-->
+    <script src="functions.js"></script>
 </body>
 </html>

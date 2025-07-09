@@ -68,3 +68,15 @@ const greetUser = (name) => {
     console.log("Hello", name);
 }
 greetUser("Mayur");
+
+// Create a function that takes a number as
+// an argument and return whether it is even
+// or odd
+  const evenodd = function (num1) {
+    if (num1 % 2 == 0) {
+        console.log("number is even");
+    } else {
+        console.log("number is odd");
+    }
+  }
+evenodd(5); 
