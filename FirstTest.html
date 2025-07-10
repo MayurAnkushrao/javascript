@@ -49,5 +49,64 @@
     <script src="ThirdTest.js"></script>
     <script src="SecondTest.js"></script>-->
     <script src="functions.js"></script>
+    
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f3f3f3;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-item {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .grid-item img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+  </style>
+
+
+
+  <h1>Responsive CSS Grid Example</h1>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/150" alt="Image 1">
+      <p>Item 1</p>
+    </div>
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/150" alt="Image 2">
+      <p>Item 2</p>
+    </div>
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/150" alt="Image 3">
+      <p>Item 3</p>
+    </div>
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/150" alt="Image 4">
+      <p>Item 4</p>
+    </div>
+  </div>
+
+
 </body>
 </html>
