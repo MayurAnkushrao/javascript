@@ -47,7 +47,7 @@ console.log("After pushing", marks.length);
 
 marks.unshift(100);
 console.log(marks);
-console.log("After unshifting", marks.length);
+console.log("After unshifting 100", marks.length);
 
 // REMOVAL OF ELEMENTS IN AN ARRAY
 // 1. POP METHOD -> removes the last element
@@ -61,8 +61,8 @@ console.log("Element removed", elementRemoved);
 // and returns that element
 
 const eleRemoved = marks.shift();
+console.log("After shifting first ele"+eleRemoved);
 console.log(marks);
-console.log(eleRemoved);
 
 // Create a shopping list of 5 items;
 // Add new element to the list;
@@ -70,19 +70,30 @@ console.log(eleRemoved);
 const shoppingList = ["bread", "eggs", "shampoo", "toothbrush", "fruits"];
 shoppingList.push("pen");
 console.log(shoppingList);
+console.log("Shift removes first element");
+
 const firstElement = shoppingList.shift();
+console.log(firstElement);
+console.log(shoppingList);
 const lastElement = shoppingList.pop();
+console.log("Pop removes last element");
+console.log(lastElement);
+console.log(shoppingList);
 console.log(firstElement, lastElement, shoppingList);
 
 // INSERTION AND REMOVAL AND REPLACE FROM ANY PLACE
-// splice -> splice(startingIndex, deleteCount, item1,item2, item3,...)
+// splice -> splice(startingIndex, no Of Item To be deleted, item1,item2, item3,...)
 // shopping list - ['eggs', 'shampoo', 'toothbrush', 'fruits']
 // to remove shampoo
+console.log("*************************************************");
+console.log("Splice method");
 shoppingList.splice(1, 1, "conditioner");
 console.log(shoppingList);
 // eggs, conditioner, toothbrush, fruits
-
-shoppingList.splice(1, 0, "paste");
+console.log("Splice method to add paste at index 1");
+shoppingList.splice(1,0, "paste");
+//["eggs","paste","conditioner","toothbrush","fruits"]
+//["eggs","conditioner","toothbrush","fruits"]
 console.log(shoppingList);
 // eggs, paste, conditioner, toothbrush, fruits
 
@@ -93,3 +104,11 @@ console.log(fruits2); // ["apple", "banana"]
 let colors = ["red", "green", "blue"];
 colors.splice(1, 0, "yellow");
 console.log(colors); //red, yellow, green, blue
+
+let items=["pen","pencil","eraser","sharpner","sissors"];
+console.log(items.slice(-5,-3));
+console.log(items); // ["eraser", "sharpner", "sissors"]
+let spliced=items.slice(-5,-3);
+console.log(spliced); // ["eraser", "sharpner", "sissors"]
+
+
