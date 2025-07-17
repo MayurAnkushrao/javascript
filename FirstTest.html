@@ -48,8 +48,10 @@
     <script src="FirstTest.js"></script>
     <script src="ThirdTest.js"></script>
     <script src="functions.js"></script>
-    <script src="SecondTest.js"></script>-->
     <script src="Array.js"></script>
+    <script src="ForthArray.js"></script>
+    <script src="SecondTest.js"></script>-->
+    <script src="FifthHigherorder.js"></script>
     
 
   <style>
@@ -84,8 +86,78 @@
       border-radius: 5px;
     }
   </style>
+<h1>Charts</h1>
+<canvas id="myChart"></canvas>
+<canvas id="yourChart"></canvas>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [ 'Value1', 'Value2', 'Value3', 'Value4', 'Value5'],
+        datasets: [{
+          label: 'Votes',
+          data: items,
+          backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+        }]
+      }
+    });
+    const data = {
+  labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+  datasets: [
+    {
+      type: 'line',
+      label: 'Monthly Sales',
+      data: [120, 150, 180, 90, 170, 220],
+      backgroundColor: 'rgba(54, 162, 235, 0.5)',
+      borderColor: 'rgba(54, 162, 235, 1)',
+      borderWidth: 1
+    },
+    {
+      type: 'line',
+      label: 'Cumulative Sales',
+      data: [120, 270, 450, 540, 710, 930],
+      borderColor: 'rgba(255, 99, 132, 1)',
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      fill: false,
+      tension: 0.3,
+      yAxisID: 'y'
+    }
+  ]
+};
 
+const config = {
+  data: data,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top'
+      },
+      title: {
+        display: true,
+        text: 'Monthly & Cumulative Sales'
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+      }
+    }
+  }
+};
+
+// Render the chart
+const yourChart = new Chart(
+  document.getElementById('yourChart'),
+  config
+);
+
+  </script>
 
   <h1>Responsive CSS Grid Example</h1>
 
@@ -107,7 +179,7 @@
       <p>Item 4</p>
     </div>
   </div>
-
+  
 
 </body>
 </html>

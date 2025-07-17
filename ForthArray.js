@@ -111,4 +111,21 @@ console.log(items); // ["eraser", "sharpner", "sissors"]
 let spliced=items.slice(-5,-3);
 console.log(spliced); // ["eraser", "sharpner", "sissors"]
 
+items.slice(1,3);
+console.log(items.slice(1,3)); // ["pencil", "eraser"]
 
+//reverse
+items=["10","12","35","24","15"];
+items.forEach((item) => {
+  console.log(item);
+});
+//reverse
+let reversedItems = [];
+for(let i = items.length - 1; i >= 0; i--) {
+  console.log(items[i]);
+  reversedItems.push(items[i]);
+}
+console.log(reversedItems); // ["sissors", "sharpner", "eraser", "pencil", "pen"]
+
+items.reverse();
+console.log(items); // ["5", "4", "3", "2", "1
