@@ -81,3 +81,9 @@ let evennum=numbers4.filter((num)=>{
     return num%2==0;//***true/false***
 });
 console.log(evennum); // [2, 6, 6]
+
+//filter number greater than 5
+let greater5=numbers4.filter((num)=>{
+    return num>15;
+})
+console.log(greater5); // [45]
