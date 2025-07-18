@@ -43,3 +43,41 @@ numbers.forEach((number, index) => {
         break; // to avoid infinite loop
     }
 });
+
+//map method
+//=============
+console.log("Using map to get square of each number");
+const squares = numbers.map((number) => {
+    //MANDATORY: return a value
+    return number * number;
+});
+
+console.log(squares); // [1, 4, 9, 16, 25]
+
+const salary= [1000, 2000, 3000, 4000, 5000];
+//Adding 10% to each salary
+let updatedSAl=[];
+salary.forEach((sal,index)=>{
+    sal=sal+sal*10/100;
+    console.log(sal);
+    updatedSAl.push(sal);
+    
+});
+console.log(updatedSAl);
+
+//using map methord
+
+const updatedSal=salary.map((sal)=>{
+    return sal+sal*0.1;
+});
+
+//filter method
+//=============
+//filter method creates a new array with all
+//  elements that pass the test implemented by
+//  the provided function
+let numbers4=[1,2,3,45,6,5,6];
+let evennum=numbers4.filter((num)=>{
+    return num%2==0;//***true/false***
+});
+console.log(evennum); // [2, 6, 6]
