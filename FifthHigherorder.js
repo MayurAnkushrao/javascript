@@ -81,3 +81,46 @@ let evennum=numbers4.filter((num)=>{
     return num%2==0;//***true/false***
 });
 console.log(evennum); // [2, 6, 6]
+
+//filter number greater than 5
+let greater5=numbers4.filter((num)=>{
+    return num>15;
+})
+console.log(greater5); // [45]
+// REDUCE METHOD
+//======================
+//let numbers4=[1,2,3,45,6,5,6];
+//sum of all numbers
+let numbers5=[40,55,70,30,90];
+console.log(numbers5);
+let sum=0;
+numbers5.forEach((num)=>{
+    return sum+=num;
+});
+console.log(sum); // 285
+
+//Using reduce method
+//Reduce is used to reduce the array to a single value
+
+//array.reduce((accumulator, currentValue) => {
+
+//    // logic to combine accumulator and currentValue
+//    return accumulator;
+//}, initialValue);
+let sum2=numbers5.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 10); // initial value is 10  default is 1
+console.log(sum2);
+//product of all numbers
+let prod=numbers5.reduce((accumulator, currentValue) => {
+    return accumulator * currentValue;
+},1); // initial value is 1
+console.log(prod); 
+
+const setwords =['i'+'love'+'js'];
+//Using reduce to concatenate words
+const concnzte=setwords.reduce((accumulator, currentValue) => {
+    return accumulator + ' ' + currentValue;
+
+},""); // initial value is empty string
+console.log(concnzte); // "i love js"
