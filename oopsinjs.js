@@ -146,3 +146,12 @@ let adult=students.filter((student)=>{
     return student.age>=18;
 });
 console.log(adult);
+
+console.log("DAY_:_2_DAY_:_2_DAY_:_2_DAY_:_2_DAY_:_2_DAY_:_2_DAY_:_2_DAY_:_2_");
+
+console.log(Object.keys(person));
+console.log(Object.values(person));
+let values=Object.values(person);
+
+console.log(values[4][0]);
+
